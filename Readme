@@ -1,14 +1,127 @@
-# 1. Projeyi oluştur
-mkdir dvl-web && cd dvl-web
+# DVL – Smart Textile Performance Platform
 
-# 2. Dosyaları yerleştir (output klasöründekileri buraya kopyala)
-#    - package.json, tsconfig.json, tailwind.config.ts, postcss.config.js
-#    - next.config.ts, next-env.d.ts, .eslintrc.json
-#    - app/ klasörü (globals.css, layout.tsx, page.tsx)
-#    - lib/ klasörü (utils.ts)
+DVL is an AI-powered smart textile platform designed for elite ice hockey players. The system combines wearable technology, embedded electronics, and artificial intelligence to collect, analyze, and visualize athlete performance data in real time.
 
-# 3. Bağımlılıkları yükle
+This repository contains the official landing page built with Next.js and Tailwind CSS.
+
+---
+
+## Features
+
+- Modern responsive landing page
+- Hero section with immersive product showcase
+- Problem & Solution presentation
+- Smart textile technology overview
+- AI analytics section
+- Interactive dashboard showcase
+- Roadmap and market sections
+- Contact section
+- Dark modern UI inspired by sports technology products
+
+---
+
+## Tech Stack
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+---
+
+## Project Structure
+
+```
+app/
+components/
+│
+├── layout/
+├── sections/
+├── ui/
+│
+lib/
+public/
+    └── images/
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kaandvloglu/DVL.git
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
 
-# 4. Geliştirme sunucusunu başlat
+Run the development server:
+
+```bash
 npm run dev
+```
+
+Open:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Build
+
+Production build:
+
+```bash
+npm run build
+```
+
+---
+
+## Future Improvements
+
+- AI-powered analytics dashboard
+- Athlete management system
+- Live sensor integration
+- Mobile application
+- Cloud synchronization
+- Authentication system
+- Admin dashboard
+- Performance reporting
+
+---
+
+## Project Status
+
+Current Version:
+
+**MVP Landing Page**
+
+The project is actively under development and new features are continuously being added.
+
+---
+
+## Author
+
+**Kaan Develioğlu**
+
+Industrial Engineering Graduate  
+Minor in Software Engineering
+
+GitHub:
+
+https://github.com/kaandvloglu
+
+---
+
+## License
+
+This project is currently private and developed as part of the DVL Smart Textile Platform.
