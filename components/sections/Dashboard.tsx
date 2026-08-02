@@ -50,7 +50,7 @@ export default function Dashboard() {
           description="A powerful analytics platform transforming raw movement data into actionable insights for athletes and coaches."
         />
 
-        <div className="mt-24 grid items-center gap-16 lg:grid-cols-[1.45fr_0.55fr]">
+        <div className="mt-24 grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
 
           {/* PHONE */}
 
@@ -59,7 +59,7 @@ export default function Dashboard() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative flex justify-start"
+            className="relative flex justify-center"
             >
 
             <div className="absolute left-24 top-20 h-[700px] w-[700px] rounded-full bg-dvl-accent/10 blur-[180px]" />
@@ -75,8 +75,8 @@ export default function Dashboard() {
                     relative
                     z-10
                     w-full
-                    max-w-[560px]
-                    scale-125
+                    max-w-[610px]
+                    scale-[1.28]
                     origin-center
                 "
                 />
