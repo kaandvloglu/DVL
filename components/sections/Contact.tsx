@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[#0D1320] py-32"
+      className="relative isolate overflow-hidden bg-[#0D1320] py-32"
     >
       <Container>
         <SectionTitle

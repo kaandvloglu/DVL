@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
   --dvl-bg: #0a0e17;
   --dvl-surface: #111827;
   --dvl-card: #161b22;
   --dvl-border: #1f2937;
-
   --dvl-accent: #f0883e;
-
   --dvl-blue: #58a6ff;
   --dvl-green: #3fb950;
   --dvl-red: #f85149;
@@ -27,37 +25,34 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  width: 100%;
 }
 
 body {
-  margin: 0;
-  overflow-x: hidden;
-
   font-family: "Inter", system-ui, sans-serif;
-
-  background: var(--dvl-bg);
+  background-color: var(--dvl-bg);
   color: #e6edf3;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
-/* Images */
+/* Prevent images from overflowing */
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
+img {
   max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Links */
+/* Selection */
 
-a {
-  text-decoration: none;
-  color: inherit;
+::selection {
+  background: rgba(240, 136, 62, 0.3);
+  color: #e6edf3;
 }
 
 /* Scrollbar */
@@ -72,39 +67,26 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2b3442;
-  border-radius: 100px;
+  background: var(--dvl-border);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #465063;
+  background: #30363d;
 }
-
-/* Selection */
-
-::selection {
-  background: rgba(240, 136, 62, 0.35);
-  color: white;
-}
-
-/* Utilities */
 
 @layer utilities {
-  .glass {
-    background: rgba(17, 24, 39, 0.72);
-    backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
   .text-gradient {
-    background: linear-gradient(
-      135deg,
-      #f0883e 0%,
-      #58a6ff 100%
-    );
-
+    background: linear-gradient(135deg, #f0883e 0%, #58a6ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .glass {
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }

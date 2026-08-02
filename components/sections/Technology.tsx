@@ -51,7 +51,7 @@ export default function Technology() {
   return (
     <section
       id="technology"
-      className="bg-[#0B1220] py-32"
+      className="relative isolate overflow-hidden bg-[#0B1220] py-32"
     >
       <Container>
 
