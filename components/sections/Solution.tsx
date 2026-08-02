@@ -106,8 +106,8 @@ export default function Solution() {
 
           <div>
 
-            <Image
-            src="/images/solutions/module-placement.webp"
+          <Image
+            src="/images/solution/module-placement.webp"
             alt="DVL Module Placement"
             width={700}
             height={500}
