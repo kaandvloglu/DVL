@@ -71,14 +71,16 @@ export default function Technology() {
 
             <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#111827] p-8">
 
-              <Image
-                src="/images/technology/exploded-view.png"
-                alt="DVL Exploded View"
-                width={1200}
-                height={1200}
-                className="w-full object-contain"
-                priority
-              />
+            <Image
+            src="/images/technology/exploded-view.webp"
+            alt="DVL Exploded View"
+            width={1200}
+            height={1200}
+            quality={85}
+            sizes="(max-width:1024px) 100vw, 50vw"
+            className="w-full object-contain"
+            priority={false}
+          />
 
             </div>
 

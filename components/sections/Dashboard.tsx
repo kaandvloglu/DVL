@@ -65,21 +65,14 @@ export default function Dashboard() {
             <div className="absolute left-24 top-20 h-[700px] w-[700px] rounded-full bg-dvl-accent/10 blur-[180px]" />
 
             <Image
-            src="/images/dashboard/coach-dashboard.png"
-            alt="DVL Coach Dashboard"
-            width={1600}
-            height={1000}
-            priority
-            className="
-                relative
-                z-10
-                w-full
-                max-w-[980px]
-                rounded-[28px]
-                border
-                border-white/10
-                shadow-[0_40px_100px_rgba(0,0,0,.45)]
-            "
+            src="/images/dashboard/coach-dashboard.webp"
+            alt="Coach Dashboard"
+            width={430}
+            height={780}
+            quality={85}
+            sizes="(max-width: 1024px) 100vw, 430px"
+            className="relative z-10"
+            priority={false}
             />
 
           </motion.div>

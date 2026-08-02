@@ -21,12 +21,14 @@ export default function Hero() {
 
       {/* Hero Image */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero/product-render.png"
+          <Image
+          src="/images/hero/product-render.webp"
           alt="DVL Smart Textile"
           fill
           priority
-          className="object-cover object-right"
+          quality={85}
+          sizes="100vw"
+          className="object-cover object-[82%_center]"
         />
       </div>
 

@@ -107,12 +107,14 @@ export default function Solution() {
           <div>
 
             <Image
-              src="/images/solution/module-placement.png"
-              alt="DVL Module Placement"
-              width={900}
-              height={900}
-              className="w-full rounded-3xl border border-white/10 shadow-2xl"
-            />
+            src="/images/solutions/module-placement.webp"
+            alt="DVL Module Placement"
+            width={700}
+            height={500}
+            quality={85}
+            sizes="(max-width:1024px) 100vw, 700px"
+            className="w-full rounded-2xl"
+          />
 
           </div>
 
