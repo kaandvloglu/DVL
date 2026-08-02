@@ -13,27 +13,13 @@ import { fadeInUp } from "@/lib/animations";
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-[#070B14]"
       id="hero"
+      className="relative overflow-hidden bg-[#070B14]"
     >
-      {/* Background Glow */}
+      {/* Background */}
+
       <GlowBackground />
 
-      {/* Hero Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero/product-render.png"
-          alt="DVL Smart Textile"
-          fill
-          priority
-          className="object-cover object-right"
-        />
-      </div>
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#070B14] via-[#070B14]/95 via-[42%] to-transparent" />
-
-      {/* Grid Overlay */}
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
@@ -44,13 +30,16 @@ export default function Hero() {
       />
 
       <Container className="relative z-10">
-        <div className="flex min-h-screen items-center">
+
+        <div className="grid min-h-screen items-center gap-20 py-36 lg:grid-cols-[1fr_1.1fr]">
+
+          {/* LEFT */}
 
           <motion.div
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="max-w-2xl pt-28 pb-16"
+            className="max-w-2xl"
           >
 
             {/* Badge */}
@@ -63,14 +52,15 @@ export default function Hero() {
 
             {/* Heading */}
 
-            <h1 className="mt-8 text-5xl font-extrabold leading-[1.05] tracking-tight text-white md:text-7xl">
+            <h1 className="mt-8 text-5xl font-extrabold leading-[1.02] tracking-tight text-white md:text-7xl">
 
               Performance
+
               <br />
 
               Analytics
 
-              <span className="block mt-4 text-dvl-accent">
+              <span className="mt-5 block text-dvl-accent">
 
                 for Elite Ice Hockey
 
@@ -82,9 +72,10 @@ export default function Hero() {
 
             <p className="mt-10 max-w-xl text-lg leading-9 text-dvl-text-secondary">
 
-              DVL combines smart textiles, embedded sensors and AI-powered
-              analytics to deliver real-time performance insights for athletes
-              and coaching staff.
+              DVL combines smart textiles, embedded electronics and
+              artificial intelligence into one lightweight wearable
+              platform that delivers real-time performance analytics
+              for elite athletes and professional coaching staff.
 
             </p>
 
@@ -100,8 +91,24 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-4 text-white transition duration-300 hover:border-dvl-accent hover:bg-white/5"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-full
+                  border
+                  border-white/10
+                  px-8
+                  py-4
+                  font-medium
+                  text-white
+                  transition
+                  duration-300
+                  hover:border-dvl-accent
+                  hover:bg-white/5
+                "
               >
+
                 Contact Us
 
                 <ArrowRight size={18} />
@@ -112,7 +119,7 @@ export default function Hero() {
 
             {/* Metrics */}
 
-            <div className="mt-20 grid max-w-xl grid-cols-3 gap-10 border-t border-white/10 pt-10">
+            <div className="mt-20 grid grid-cols-3 gap-8 border-t border-white/10 pt-10">
 
               <div>
 
@@ -122,9 +129,9 @@ export default function Hero() {
 
                 </h3>
 
-                <p className="mt-3 text-dvl-text-secondary">
+                <p className="mt-3 leading-7 text-dvl-text-secondary">
 
-                  Real-Time
+                  Performance
                   <br />
                   Analytics
 
@@ -140,7 +147,7 @@ export default function Hero() {
 
                 </h3>
 
-                <p className="mt-3 text-dvl-text-secondary">
+                <p className="mt-3 leading-7 text-dvl-text-secondary">
 
                   Wireless
                   <br />
@@ -158,7 +165,7 @@ export default function Hero() {
 
                 </h3>
 
-                <p className="mt-3 text-dvl-text-secondary">
+                <p className="mt-3 leading-7 text-dvl-text-secondary">
 
                   Motion
                   <br />
@@ -172,30 +179,158 @@ export default function Hero() {
 
           </motion.div>
 
+          {/* RIGHT */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 40,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.9,
+            }}
+            className="relative flex justify-end"
+          >
+
+            {/* Orange Glow */}
+
+            <div className="absolute right-16 top-1/2 h-[650px] w-[650px] -translate-y-1/2 rounded-full bg-dvl-accent/15 blur-[160px]" />
+
+            {/* Product Card */}
+
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[36px]
+                border
+                border-white/10
+                bg-white/[0.02]
+                backdrop-blur-xl
+                p-8
+              "
+            >
+                            <Image
+                src="/images/hero/product-render.png"
+                alt="DVL Smart Textile Platform"
+                width={900}
+                height={900}
+                priority
+                className="
+                  relative
+                  z-10
+                  w-full
+                  max-w-[720px]
+                  object-contain
+                  drop-shadow-[0_40px_80px_rgba(0,0,0,.45)]
+                "
+              />
+
+              {/* Floating Label */}
+
+              <div
+                className="
+                  absolute
+                  left-8
+                  top-8
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-[#111827]/80
+                  px-5
+                  py-4
+                  backdrop-blur-xl
+                "
+              >
+
+                <p className="text-xs uppercase tracking-[0.3em] text-dvl-text-secondary">
+                  Smart Textile
+                </p>
+
+                <h4 className="mt-2 text-lg font-semibold text-white">
+                  AI Wearable Platform
+                </h4>
+
+              </div>
+
+              {/* Bottom Right Card */}
+
+              <div
+                className="
+                  absolute
+                  bottom-8
+                  right-8
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-[#111827]/80
+                  px-6
+                  py-5
+                  backdrop-blur-xl
+                "
+              >
+
+                <div className="flex items-center gap-4">
+
+                  <div className="h-3 w-3 rounded-full bg-dvl-green" />
+
+                  <div>
+
+                    <p className="text-xs uppercase tracking-[0.25em] text-dvl-text-secondary">
+                      Status
+                    </p>
+
+                    <h4 className="mt-1 text-lg font-semibold text-white">
+                      Live Monitoring
+                    </h4>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
         </div>
+
       </Container>
+            {/* Scroll Indicator */}
 
-      {/* Scroll */}
+            <div className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2">
 
-      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2">
+<motion.div
+  animate={{
+    y: [0, 10, 0],
+  }}
+  transition={{
+    duration: 2,
+    repeat: Infinity,
+  }}
+  className="flex flex-col items-center gap-3"
+>
 
-        <div className="flex flex-col items-center gap-2">
+  <span className="text-[11px] uppercase tracking-[0.45em] text-dvl-text-secondary">
 
-          <span className="text-xs tracking-[0.4em] text-dvl-text-secondary">
+    Scroll
 
-            SCROLL
+  </span>
 
-          </span>
+  <ChevronDown
+    size={24}
+    className="text-dvl-accent"
+  />
 
-          <ChevronDown
-            className="animate-bounce text-dvl-accent"
-            size={24}
-          />
+</motion.div>
 
-        </div>
+</div>
 
-      </div>
-
-    </section>
-  );
+</section>
+);
 }
