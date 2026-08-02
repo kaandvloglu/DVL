@@ -1,0 +1,14 @@
+# 1. Projeyi oluştur
+mkdir dvl-web && cd dvl-web
+
+# 2. Dosyaları yerleştir (output klasöründekileri buraya kopyala)
+#    - package.json, tsconfig.json, tailwind.config.ts, postcss.config.js
+#    - next.config.ts, next-env.d.ts, .eslintrc.json
+#    - app/ klasörü (globals.css, layout.tsx, page.tsx)
+#    - lib/ klasörü (utils.ts)
+
+# 3. Bağımlılıkları yükle
+npm install
+
+# 4. Geliştirme sunucusunu başlat
+npm run dev
