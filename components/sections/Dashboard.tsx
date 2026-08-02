@@ -50,26 +50,36 @@ export default function Dashboard() {
           description="A powerful analytics platform transforming raw movement data into actionable insights for athletes and coaches."
         />
 
-        <div className="mt-24 grid items-center gap-20 lg:grid-cols-2">
+        <div className="mt-24 grid items-center gap-16 lg:grid-cols-[1.45fr_0.55fr]">
 
           {/* PHONE */}
 
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: .7 }}
-            className="relative flex justify-center"
-          >
+            transition={{ duration: 0.7 }}
+            className="relative flex justify-start"
+            >
 
-            <div className="absolute h-[500px] w-[500px] rounded-full bg-dvl-accent/10 blur-[120px]" />
+            <div className="absolute left-24 top-20 h-[700px] w-[700px] rounded-full bg-dvl-accent/10 blur-[180px]" />
 
             <Image
-              src="/images/dashboard/dashboard.png"
-              alt="Dashboard"
-              width={430}
-              height={780}
-              className="relative z-10"
+            src="/images/dashboard/coach-dashboard.png"
+            alt="DVL Coach Dashboard"
+            width={1600}
+            height={1000}
+            priority
+            className="
+                relative
+                z-10
+                w-full
+                max-w-[980px]
+                rounded-[28px]
+                border
+                border-white/10
+                shadow-[0_40px_100px_rgba(0,0,0,.45)]
+            "
             />
 
           </motion.div>
